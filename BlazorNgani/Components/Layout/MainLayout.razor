@@ -1,0 +1,35 @@
+﻿@inherits LayoutComponentBase
+@inject NavigationManager Navigation
+<html data-theme="luxury">
+
+<body>
+    <div class="page">
+        @if (ShowSideBar)
+        {
+            <div class="sidebar">
+                <NavMenu />
+            </div>
+        }
+
+        <main>
+            <div class="top-row px-4" style="background-color:rgb(9, 9, 11); border-bottom:solid 1px rgba(0,0,0,0.2)">
+                <a href="https://learn.microsoft.com/aspnet/core/" target="_blank">About</a>
+            </div>
+
+            <article class="content px-4">
+                @Body
+            </article>
+        </main>
+    </div>
+
+    <div id="blazor-error-ui" data-nosnippet>
+        An unhandled error has occurred.
+        <a href="." class="reload">Reload</a>
+        <span class="dismiss">🗙</span>
+    </div>
+
+    </body>
+</html>
+@code {
+    private bool ShowSideBar => !string.IsNullOrEmpty(Navigation.ToBaseRelativePath(Navigation.Uri));
+  } 
