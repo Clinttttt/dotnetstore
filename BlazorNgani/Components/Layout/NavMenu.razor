@@ -1,11 +1,53 @@
-﻿<div data-theme="silk">
+﻿@page "/Navmenu"
+@inject NavigationManager navigation;
+@namespace BlazorNgani.Components
+@using BlazorNgani.Components.Layout
+<div data-theme="silk">
+
+    
+    <dialog id="my_modal_4" class="modal">
+        <div class="modal-box w-11/12 max-w-2xl max-h-130">
+
+            <div class="hero bg-base-200 max-h-140">
+                <div class="hero-content flex-col lg:flex-row-reverse">
+                    <div class="text-center lg:text-left">
+                        <h1 class="text-5xl font-bold">Login now!</h1>
+                        <p class="py-6">
+                            Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem
+                            quasi. In deleniti eaque aut repudiandae et a id nisi.
+                        </p>
+                    </div>
+                    <div class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+                        <div class="card-body">
+                            <fieldset class="fieldset">
+                                <label class="label">Email</label>
+                                <input type="email" class="input" placeholder="Email" />
+                                <label class="label">Password</label>
+                                <input type="password" class="input" placeholder="Password" />
+                                <div><a class="link link-hover">Forgot password?</a></div>
+                                <button class="btn btn-neutral mt-4">Login</button>
+                            </fieldset>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-action ">
+                <form method="dialog">
+                    <!-- if there is a button, it will close the modal -->
+                    <button class="btn ">Close</button>
+                </form>
+            </div>
+        </div>
+    </dialog>
+
+
     <div class="top-row ps-3 navbar" style="background-color:rgb(229, 230, 231)">
         <div class="container-fluid">
-            <a class=" font-light items-center text-xl flex-row flex" href="">
+            <a class=" font-bold items-center italic  text-xl flex-row flex" href="" style="color:rgb(197, 92, 0)">
                 <svg class="w-[35px] h-[35px] text-secondary-content" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
                     <path stroke="currentColor" stroke-linejoin="round" stroke-width="0.5" d="M12.1429 11v9m0-9c-2.50543-.7107-3.19099-1.39543-6.13657-1.34968-.48057.00746-.86348.38718-.86348.84968v7.2884c0 .4824.41455.8682.91584.8617 2.77491-.0362 3.45995.6561 6.08421 1.3499m0-9c2.5053-.7107 3.1067-1.39542 6.0523-1.34968.4806.00746.9477.38718.9477.84968v7.2884c0 .4824-.4988.8682-1 .8617-2.775-.0362-3.3758.6561-6 1.3499m2-14c0 1.10457-.8955 2-2 2-1.1046 0-2-.89543-2-2s.8954-2 2-2c1.1045 0 2 .89543 2 2Z" />
                 </svg>
-                Boundless Books
+                Lost Library
             </a>
         </div>
     </div>
@@ -88,9 +130,9 @@
                         <svg class="w-[27px] h-[27px] text-error" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
                             <path fill-rule="evenodd" d="M9 2a1 1 0 0 0-1 1H6a2 2 0 0 0-2 2v15a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2h-2a1 1 0 0 0-1-1H9Zm1 2h4v2h1a1 1 0 1 1 0 2H9a1 1 0 0 1 0-2h1V4Zm5.707 8.707a1 1 0 0 0-1.414-1.414L11 14.586l-1.293-1.293a1 1 0 0 0-1.414 1.414l2 2a1 1 0 0 0 1.414 0l4-4Z" clip-rule="evenodd" />
                         </svg>
-                    My Orders</a>
+                        My Orders</a>
                 </li>
-            
+
                 <li>
                     <a>
                         <svg class="w-[27px] h-[27px] text-error" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
@@ -100,30 +142,56 @@
                         Shopping Cart
                     </a>
                 </li>
+                <li>
+                    <!--   <button class="btn" onclick="my_modal_4.showModal()">
+                        <svg class="w-[27px] h-[27px] text-secondary-content" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                            <path fill-rule="evenodd" d="M12 4a4 4 0 1 0 0 8 4 4 0 0 0 0-8Zm-2 9a4 4 0 0 0-4 4v1a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2v-1a4 4 0 0 0-4-4h-4Z" clip-rule="evenodd" />
+                        </svg>
+
+                        Admin
+                    </button>-->
+
+                    <NavLink class="btn justify-start border-0" href="AdminLayout">
+                        <svg class="w-[27px] h-[27px] text-secondary-content" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                            <path fill-rule="evenodd" d="M12 4a4 4 0 1 0 0 8 4 4 0 0 0 0-8Zm-2 9a4 4 0 0 0-4 4v1a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2v-1a4 4 0 0 0-4-4h-4Z" clip-rule="evenodd" />
+                        </svg>
+
+                    Start Selling
+                    </NavLink>
+                </li>
             </ul>
-            <!-- <div class="indicator mt-5 ml-2">
-                 <span class="indicator-item badge badge-secondary">12</span>
-                 <button class="btn btn-neutral btn-outline text-neutral-content " style="color:rgb(24, 24, 36)">New Release</button>
-             </div>-->
-            <!--   <div class="nav-item px-3">
-                   <NavLink class="nav-link " href="" Match="NavLinkMatch.All">
-                       <span class="text-secondary " aria-hidden="true">Lorem ererr</span>
-                   </NavLink>
-               </div>
 
-               <div class="nav-item px-3">
-                   <NavLink class="nav-link" href="Menu">
-                       <span class="text-secondary " aria-hidden="true">Lorem ererr</span>
-                   </NavLink>
-               </div>
-
-               <div class="nav-item px-3">
-                   <NavLink class="nav-link" href="weather">
-                       <span class="text-secondary " aria-hidden="true">Lorem ererr</span>
-                   </NavLink>
-               </div>-->
         </nav>
     </div>
 
 
 </div>
+
+
+
+
+
+
+
+
+<!-- <div class="indicator mt-5 ml-2">
+    <span class="indicator-item badge badge-secondary">12</span>
+    <button class="btn btn-neutral btn-outline text-neutral-content " style="color:rgb(24, 24, 36)">New Release</button>
+</div>-->
+<!--   <div class="nav-item px-3">
+       <NavLink class="nav-link " href="" Match="NavLinkMatch.All">
+           <span class="text-secondary " aria-hidden="true">Lorem ererr</span>
+       </NavLink>
+   </div>
+
+   <div class="nav-item px-3">
+       <NavLink class="nav-link" href="Menu">
+           <span class="text-secondary " aria-hidden="true">Lorem ererr</span>
+       </NavLink>
+   </div>
+
+   <div class="nav-item px-3">
+       <NavLink class="nav-link" href="weather">
+           <span class="text-secondary " aria-hidden="true">Lorem ererr</span>
+       </NavLink>
+   </div>-->

@@ -2,6 +2,7 @@
 @inject NavigationManager Navigation
 <html data-theme="silk">
 
+
 <body>
     <div class="page">
         @if (ShowSideBar)
@@ -12,8 +13,8 @@
             </div>
         }
 
-        <main>
-            <div class="hidden sm:block lg:flex flex-row  items-center pt-2 pb-2 justify-end gap-2 px-3" style="border-bottom:solid 1px rgba(0,0,0,0.2)">
+        <main >
+            <div class="hidden sm:block lg:flex flex-row  items-center pt-2 pb-2 justify-end gap-2 px-3" style="border-bottom:solid 1px rgba(0,0,0,0.2);background-color:rgb(252, 248, 245)">
                 <div class="justify-self-start text-neutral self-center breadcrumbs text-sm" style="margin-right: auto;">
                     <ul>
                         <li><a>Home</a></li>
@@ -41,7 +42,7 @@
 
                 <NavLink class="base-content font-light text-lg">Home</NavLink>
                 <NavLink class="base-content font-light text-lg">Sign up</NavLink>
-                <label class="toggle text-base-content text-neutral ml-2 w-12 ">
+                <label class="toggle text-base-content  ml-2 w-12 ">
                     <input type="checkbox" value="synthwave" class="theme-controller" />
 
                     <svg aria-label="sun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g stroke-linejoin="round" stroke-linecap="round" stroke-width="2" fill="none" stroke="currentColor"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2"></path><path d="M12 20v2"></path><path d="m4.93 4.93 1.41 1.41"></path><path d="m17.66 17.66 1.41 1.41"></path><path d="M2 12h2"></path><path d="M20 12h2"></path><path d="m6.34 17.66-1.41 1.41"></path><path d="m19.07 4.93-1.41 1.41"></path></g></svg>
