@@ -8,23 +8,24 @@
         @if (ShowSideBar)
         {
             <div class="sidebar">
-                <NavMenu />
+                <NavMenu/>
+
 
             </div>
         }
 
         <main >
-            <div class="hidden sm:block lg:flex flex-row  items-center pt-2 pb-2 justify-end gap-2 px-3" style="border-bottom:solid 1px rgba(0,0,0,0.2);background-color:rgb(252, 248, 245)">
+            <div class="hidden sm:block lg:flex flex-row  items-center pt-2 pb-2 justify-end gap-2 px-3 base-300 bg-base-200	" style="border-bottom:solid 1px rgba(0,0,0,0.2);">
                 <div class="justify-self-start text-neutral self-center breadcrumbs text-sm" style="margin-right: auto;">
                     <ul>
-                        <li><a>Home</a></li>
+                        <li class="text-secondary-content" style="color:rgb(132, 69, 19)"><a>Home</a></li>
                         <li class="text-secondary-content"><a>Main Menu</a></li>
-                        <li>Shop now</li>
+                        <li class="" style="color:rgb(75, 71, 67)">Shop now</li>
                     </ul>
                 </div>
 
-                <label class="input base-content">
-                        <svg class="h-[1em] opacity-50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <label class="input base-content bg-base-200 w-70" >
+                        <svg class="h-[1em]  opacity-50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                             <g stroke-linejoin="round"
                                stroke-linecap="round"
                                stroke-width="2.5"
@@ -36,12 +37,12 @@
                         </svg>
                         <input type="search" required placeholder="Search" />
                     </label>
-                <svg class="w-[28px] h-[28px] text-secondary-content ml-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                <svg style="color:rgb(197, 92, 0)" class="w-[29px] h-[29px]  ml-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
                     <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2" d="M5 4h1.5L9 16m0 0h8m-8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm-8.5-3h9.25L19 7H7.312" />
                 </svg>
 
-                <NavLink class="base-content font-light text-lg">Home</NavLink>
-                <NavLink class="base-content font-light text-lg">Sign up</NavLink>
+                <NavLink class="font-semilight base-content text-lg" >Home</NavLink>
+                <NavLink class="font-semilight  base-content text-lg">Sign up</NavLink>
                 <label class="toggle text-base-content  ml-2 w-12 ">
                     <input type="checkbox" value="synthwave" class="theme-controller" />
 

@@ -41,7 +41,7 @@
     </dialog>
 
 
-    <div class="top-row ps-3 navbar" style="background-color:rgb(229, 230, 231)">
+    <div class="top-row ps-3   navbar " style=" border-bottom:solid 1px rgba(0,0,0,0.2); background-color:var(	--color-base-200)">
         <div class="container-fluid">
             <a class=" font-bold items-center italic  text-xl flex-row flex" href="" style="color:rgb(197, 92, 0)">
                 <svg class="w-[35px] h-[35px] text-secondary-content" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
@@ -51,66 +51,15 @@
             </a>
         </div>
     </div>
-
+    
     <input type="checkbox" title="Navigation menu" class="navbar-toggler" />
 
-    <div class="nav-scrollable" style=" background-color:rgb(219, 218, 217); border-right:solid 1px rgba(0,0,0,0.2)" onclick="document.querySelector('.navbar-toggler').click()">
+    <div class="nav-scrollable 	neutral-content" style=" border-right:solid 1px rgba(0,0,0,0.2)" onclick="document.querySelector('.navbar-toggler').click()">
         <nav class="nav flex-column ">
-            <div>
-                <label class="text-xl font-semilight flex ml-4 my-2 base-content">Genre</label>
-                <select class="select select-md justify-self-start self-center flex sm:block lg:select select-md text-secondary-content" style="background-color:rgb(24, 24, 36)">
-                    <option disabled selected class="text-secondary-content">Romance</option>
-                    <option class="text-secondary-content">Contemporary Romance</option>
-                    <option class="text-secondary-content">Historical Romance</option>
-                    <option class="text-secondary-content">Young Adult Romance</option>
-                    <option class="text-secondary-content">Romantic Comedy</option>
-
-
-                </select>
-                <select class="mt-2 select select-md text-secondary-content" style="background-color:rgb(24, 24, 36)">
-                    <option disabled selected class="text-secondary-content">Fantasy</option>
-                    <option class="text-secondary-content">Epic Fantasy</option>
-                    <option class="text-secondary-content">Urban Fantasy</option>
-                    <option class="text-secondary-content">Dark Fantasy</option>
-                    <option class="text-secondary-content">High Fantasy</option>
-                    <option class="text-secondary-content">Low Fantasy</option>
-
-
-                </select>
-                <select class="mt-2 select select-md text-secondary-content" style="background-color:rgb(24, 24, 36)">
-                    <option disabled selected class="text-secondary-content">Manga</option>
-                    <option class="text-secondary-content">Shoneny</option>
-                    <option class="text-secondary-content">Shojo</option>
-                    <option class="text-secondary-content">Seinen</option>
-                    <option class="text-secondary-content">Josei</option>
-                    <option class="text-secondary-content">Kodomomuke</option>
-
-
-                </select>
-                <select class="mt-2 select select-md text-secondary-content" style="background-color:rgb(24, 24, 36)">
-                    <option disabled selected class="text-secondary-content">Manhwa</option>
-                    <option class="text-secondary-content">Action</option>
-                    <option class="text-secondary-content">Drama</option>
-                    <option class="text-secondary-content">Slice of Life</option>
-                    <option class="text-secondary-content">Fantasy</option>
-                    <option class="text-secondary-content">Romance</option>
-
-
-                </select>
-                <select class="mt-2 select select-md text-secondary-content" style="background-color:rgb(24, 24, 36)">
-                    <option disabled selected class="text-secondary-content">Suspense</option>
-                    <option class="text-secondary-content">Thriller</option>
-                    <option class="text-secondary-content">Mystery</option>
-                    <option class="text-secondary-content">Horror</option>
-                    <option class="text-secondary-content">Psychological Thriller</option>
-                    <option class="text-secondary-content">Crime Thriller</option>
-
-
-                </select>
-            </div>
-            <ul class="menu bg-base-200 h-60 rounded-box w-full mt-3" style="border-radius:0">
+         
+            <ul class="menu 	neutral-content h-60 rounded-box w-full mt-1">
                 <li>
-                    <a>
+                    <a class="text-error text-md  font-semibold">
                         <svg class="w-[27px] h-[27px] text-error" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
                             <path fill-rule="evenodd" d="M12 20a7.966 7.966 0 0 1-5.002-1.756l.002.001v-.683c0-1.794 1.492-3.25 3.333-3.25h3.334c1.84 0 3.333 1.456 3.333 3.25v.683A7.966 7.966 0 0 1 12 20ZM2 12C2 6.477 6.477 2 12 2s10 4.477 10 10c0 5.5-4.44 9.963-9.932 10h-.138C6.438 21.962 2 17.5 2 12Zm10-5c-1.84 0-3.333 1.455-3.333 3.25S10.159 13.5 12 13.5c1.84 0 3.333-1.455 3.333-3.25S13.841 7 12 7Z" clip-rule="evenodd" />
                         </svg>
@@ -118,15 +67,16 @@
                     </a>
                 </li>
                 <li>
-                    <a>
-                        <svg class="w-[27px] h-[27px] text-error" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="0.8" d="M12.01 6.001C6.5 1 1 8 5.782 13.001L12.011 20l6.23-7C23 8 17.5 1 12.01 6.002Z" />
+                    <a class="text-error text-md  font-semibold">
+                        <svg class="[27px] h-[27px] text-error" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="m12.75 20.66 6.184-7.098c2.677-2.884 2.559-6.506.754-8.705-.898-1.095-2.206-1.816-3.72-1.855-1.293-.034-2.652.43-3.963 1.442-1.315-1.012-2.678-1.476-3.973-1.442-1.515.04-2.825.76-3.724 1.855-1.806 2.201-1.915 5.823.772 8.706l6.183 7.097c.19.216.46.34.743.34a.985.985 0 0 0 .743-.34Z" />
                         </svg>
+
                         My Wishlist
                     </a>
                 </li>
                 <li>
-                    <a>
+                    <a class="text-error text-md  font-semibold">
                         <svg class="w-[27px] h-[27px] text-error" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
                             <path fill-rule="evenodd" d="M9 2a1 1 0 0 0-1 1H6a2 2 0 0 0-2 2v15a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2h-2a1 1 0 0 0-1-1H9Zm1 2h4v2h1a1 1 0 1 1 0 2H9a1 1 0 0 1 0-2h1V4Zm5.707 8.707a1 1 0 0 0-1.414-1.414L11 14.586l-1.293-1.293a1 1 0 0 0-1.414 1.414l2 2a1 1 0 0 0 1.414 0l4-4Z" clip-rule="evenodd" />
                         </svg>
@@ -134,10 +84,11 @@
                 </li>
 
                 <li>
-                    <a>
-                        <svg class="w-[27px] h-[27px] text-error" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="0.7" d="M5 4h1.5L9 16m0 0h8m-8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm-8.5-3h9.25L19 7H7.312" />
+                    <a class="text-error text-md font-semibold">
+                        <svg class="w-[27px] h-[27px] text-error" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                            <path fill-rule="evenodd" d="M4 4a1 1 0 0 1 1-1h1.5a1 1 0 0 1 .979.796L7.939 6H19a1 1 0 0 1 .979 1.204l-1.25 6a1 1 0 0 1-.979.796H9.605l.208 1H17a3 3 0 1 1-2.83 2h-2.34a3 3 0 1 1-4.009-1.76L5.686 5H5a1 1 0 0 1-1-1Z" clip-rule="evenodd" />
                         </svg>
+
 
                         Shopping Cart
                     </a>
@@ -151,8 +102,8 @@
                         Admin
                     </button>-->
 
-                    <NavLink class="btn justify-start border-0" href="AdminLayout">
-                        <svg class="w-[27px] h-[27px] text-secondary-content" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                    <NavLink class="  justify-start text-md font-semibold  text-error" href="AdminHome">
+                        <svg class="w-[27px] h-[27px] text-error" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
                             <path fill-rule="evenodd" d="M12 4a4 4 0 1 0 0 8 4 4 0 0 0 0-8Zm-2 9a4 4 0 0 0-4 4v1a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2v-1a4 4 0 0 0-4-4h-4Z" clip-rule="evenodd" />
                         </svg>
 
@@ -160,7 +111,97 @@
                     </NavLink>
                 </li>
             </ul>
+            <div >
+                <label class="text-xl font-semibold flex ml-4 	base-content  " style="margin-top:-1.9rem;">Genre</label>
+              <div class="mt-1">
+                    <select class="select select-md justify-self-start self-center flex sm:block lg:select select-md bg-base-300	" >
+                        <option disabled selected class="base-content">All Genre</option>
+                        <option class="base-content">All Genre </option>
+                   
 
+
+                    </select>
+                    <select class="select select-md justify-self-start self-center flex sm:block lg:select select-md mt-2 bg-base-300	">
+                        <option disabled selected class="bg-base-300 base-content">Fantasy</option>
+                        <option class="base-content bg-base-300">High/Epic Fantasy</option>
+                        <option class="base-content bg-base-300">Urban Fantasy</option>
+                        <option class="base-content bg-base-300">Dark Fantasy</option>
+                        <option class="base-content bg-base-300">Romantasy</option>
+                        <option class="base-content bg-base-300">Portal Fantasy</option>
+                        <option class="base-content bg-base-300">Mythic Fantasy</option>
+                        <option class="base-content bg-base-300">Sword & Sorcery</option>
+                        <option class="base-content bg-base-300">Historical Fantasy</option>
+                        <option class="base-content bg-base-300">Science Fantasy</option>
+                        <option class="base-content bg-base-300">Comedic Fantasy</option>
+                        <option class="base-content bg-base-300">Magical Realism</option>
+                        <option class="base-content bg-base-300">YA Fantasy</option>
+
+                    </select>
+                    <select class="select select-md justify-self-start self-center flex sm:block lg:select select-md mt-2 bg-base-300	">
+                        <option disabled selected class="base-content">Manga</option>
+                        <option class="base-content bg-base-300">Shonen</option>
+                        <option class="base-content bg-base-300">Shojo</option>
+                        <option class="base-content bg-base-300">Seinen</option>
+                        <option class="base-content bg-base-300">Josei</option>
+                        <option class="base-content bg-base-300">Isekai</option>
+                        <option class="base-content bg-base-300">Mecha</option>
+                        <option class="base-content bg-base-300">Slice-of-Life</option>
+                        <option class="base-content bg-base-300">Yaoi/BL</option>
+                        <option class="base-content bg-base-300">Yuri/GL</option>
+                        <option class="base-content bg-base-300">Harem</option>
+                        <option class="base-content bg-base-300">Sports</option>
+
+
+                    </select>
+                    <select class="select select-md justify-self-start self-center flex sm:block lg:select select-md mt-2 bg-base-300	">
+                        <option disabled selected class="base-content">Manhwa</option>
+                        <option class="base-content bg-base-300">Webtoon</option>
+                        <option class="base-content bg-base-300">Murim</option>
+                        <option class="base-content bg-base-300">Regression</option>
+                        <option class="base-content bg-base-300">Transmigration</option>
+                        <option class="base-content bg-base-300">Dungeon/System</option>
+                        <option class="base-content bg-base-300">Modern Romance</option>
+                        <option class="base-content bg-base-300">Historical Romance</option>
+                        <option class="base-content bg-base-300">Office Drama</option>
+                        <option class="base-content bg-base-300">BL</option>
+                        <option class="base-content bg-base-300">GL</option>
+                        <option class="base-content bg-base-300">Survival</option>
+
+
+
+                    </select>
+                    <select class="select select-md justify-self-start self-center flex sm:block lg:select select-md mt-2 bg-base-300	">
+                        <option disabled selected class="base-content">Suspense</option>
+                        <option class="base-content bg-base-300">Crime</option>
+                        <option class="base-content bg-base-300">Legal Thriller</option>
+                        <option class="base-content bg-base-300">Medical Thriller</option>
+                        <option class="base-content bg-base-300">Domestic Suspense</option>
+                        <option class="base-content bg-base-300">Noir</option>
+                        <option class="base-content bg-base-300">Action Suspense</option>
+                        <option class="base-content bg-base-300">Police Procedural</option>
+                        <option class="base-content bg-base-300">Conspiracy</option>
+                        <option class="base-content bg-base-300">Techno-Thriller</option>
+                        <option class="base-content bg-base-300">Heist</option>
+                        <option class="base-content bg-base-300">Psychological Thriller</option>
+
+                    </select>
+                    <select class="select select-md justify-self-start self-center flex sm:block lg:select select-md mt-2 bg-base-300	">
+                        <option class="base-content bg-base-300">Contemporary</option>
+                        <option class="base-content bg-base-300">Historical</option>
+                        <option class="base-content bg-base-300">Paranormal</option>
+                        <option class="base-content bg-base-300">Rom-Com</option>
+                        <option class="base-content bg-base-300">New Adult</option>
+                        <option class="base-content bg-base-300">Dark Romance</option>
+                        <option class="base-content bg-base-300">Sports Romance</option>
+                        <option class="base-content bg-base-300">Billionaire</option>
+                        <option class="base-content bg-base-300">LGBTQ+</option>
+                        <option class="base-content bg-base-300">Arranged Marriage</option>
+                        <option class="base-content bg-base-300">Second Chance</option>
+
+
+                    </select>
+              </div>
+            </div>
         </nav>
     </div>
 
