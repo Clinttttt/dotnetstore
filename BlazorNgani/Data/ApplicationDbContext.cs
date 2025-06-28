@@ -8,7 +8,7 @@ namespace BlazorNgani.Data
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options)
         {
         }
-        public DbSet<ProductDetails> ProductInfo { get; set; }
+        public DbSet<Product> ProductInfos { get; set; }
         protected ApplicationDbContext()
         {
         }
