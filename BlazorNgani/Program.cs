@@ -1,4 +1,5 @@
 using BlazorNgani.Admin;
+using BlazorNgani.Admin.Components.Services;
 using BlazorNgani.Components;
 using BlazorNgani.Data;
 using Microsoft.EntityFrameworkCore;
@@ -6,7 +7,7 @@ using Microsoft.Extensions.Options;
 
 var builder = WebApplication.CreateBuilder(args);
 
-
+builder.Services.AddScoped<IProductService, ProductService>();
 builder.Services.AddRazorComponents()
     .AddInteractiveServerComponents();
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
