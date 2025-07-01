@@ -9,10 +9,11 @@ namespace BlazorNgani.Admin.Components.Services
         private readonly ApplicationDbContext _db;
         public ProductService(ApplicationDbContext db) => _db = db;
         public async Task<List<Product>> GetAllProduct() =>
-            await _db.ProductInfos.ToListAsync();
+            await _db.ProductInfos.ToListAsync();  
         public async Task<Product> GetProduct(int productId)
         {
             return await _db.ProductInfos.FindAsync(productId);
         }
+      
     }
 }

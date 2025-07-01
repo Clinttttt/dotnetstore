@@ -1,6 +1,5 @@
-﻿
-@using Models
-
+﻿@using Models
+@using Microsoft.AspNetCore.Components.Routing
 @inject NavigationManager navigation
 
 
@@ -45,7 +44,7 @@
             <div class="flex items-center justify-between">
                 <span class="text-md font-bold text-gray-900 dark:text-white">$@Item.Price.ToString("0.00")</span>
                 <button class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus-ring-primary font-medium rounded-lg text-sm px-2 py-2.5  text-center dark:bg-primary dark:hover:bg-secondary-content dark:focus:ring-secondary-content" @onclick:preventDefault
-                @onclick:stopPropagation>
+                        @onclick:stopPropagation>
                     Add to cart
                 </button>
             </div>
@@ -67,7 +66,5 @@
 @code {
     [Parameter]
     public Product Item { get; set; }
- 
-
 
 }

@@ -5,6 +5,7 @@ using BlazorNgani.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
 
+
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddScoped<IProductService, ProductService>();

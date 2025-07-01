@@ -1,14 +1,20 @@
 ﻿@page "/Menu"
 @rendermode InteractiveServer
 @inject NavigationManager navigation
+@using Microsoft.EntityFrameworkCore
 @using Models
 @using Admin.Components.Services
 @inject IProductService ProductService
+@using Data
+@inject ApplicationDbContext _db
+
+
+
 
 
 <body data-theme="silk base-100 " style="background-color:rgb(219, 219, 219)">
 
-    <div class="flex-wrap flex ga-4 sm:flex-wrap lg:flex flex-row justify-center gap-8 mt-6">
+    <div class="flex-wrap flex ga-4 sm:flex-wrap lg:flex flex-row justify-center gap-8 mt-6 ">
         <div class="card bg-base-100 image-full w-40 shadow-sm">
             <figure>
                 <img src="/Img/romance.jpg"
@@ -75,9 +81,9 @@
             </div>
         </div>
     </div>
-    <div class="flex-col flex flex-wrap sm:flex-wrap lg:flex flex-row gap-12 mt-5 justify-center  items-center flex-wrap min-h-screen">
-    
-        
+    <div class="flex-col flex flex-wrap sm:flex-wrap lg:flex flex-row gap-9 mt-5 justify-center  items-center flex-wrap min-h-screen">
+
+
         @if (products != null)
         {
             @foreach (var product in products)
@@ -85,19 +91,28 @@
                 <ProductCard Item="product" />
             }
         }
+
+
+
+
     </div>
 
 
 </body>
 
 @code {
+
     private List<Product> products;
-    
+
+
     protected override async Task OnInitializedAsync()
     {
         products = await ProductService.GetAllProduct();
-
     }
 }
+
+
+
+
 
 
