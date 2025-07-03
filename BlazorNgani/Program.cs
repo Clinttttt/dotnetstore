@@ -1,13 +1,16 @@
 using BlazorNgani.Admin;
 using BlazorNgani.Admin.Components.Services;
 using BlazorNgani.Components;
+using BlazorNgani.Components.OverView;
 using BlazorNgani.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
 
 
 var builder = WebApplication.CreateBuilder(args);
+builder.Services.AddServerSideBlazor();
 
+builder.Services.AddScoped<ICartService, CartService>();
 builder.Services.AddScoped<IProductService, ProductService>();
 builder.Services.AddRazorComponents()
     .AddInteractiveServerComponents();
