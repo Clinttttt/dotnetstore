@@ -1,32 +1,47 @@
-﻿using BlazorNgani.Models;
+﻿// BlazorNgani/Admin/Components/Services/CartService.cs
+using BlazorNgani.Data;
+using BlazorNgani.Models;
+using Microsoft.EntityFrameworkCore;
 
 public class CartService : ICartService
 {
-    private readonly List<Product> _cartItems = new();
+    private readonly ApplicationDbContext _db;
     public event Action? Onchange;
 
-    public Task<List<Product>> CartItems => Task.FromResult(_cartItems.ToList());
+    public CartService(ApplicationDbContext db) => _db = db;
 
-    public Task AddToCart(Product product)
+    public async Task AddToCart(Product product)
     {
-        if (!_cartItems.Any(p => p.Id == product.Id))
+        // Check if already in cart
+        if (!await _db.CartItems.AnyAsync(ci => ci.ProductId == product.Id))
         {
-            _cartItems.Add(product);
+            var cartItem = new CartItem { ProductId = product.Id };
+            _db.CartItems.Add(cartItem);
+            await _db.SaveChangesAsync();
             Onchange?.Invoke();
         }
-        return Task.CompletedTask;
     }
 
-    public Task RemoveFromCart(Product product)
+    public async Task RemoveFromCart(Product product)
     {
-        var item = _cartItems.FirstOrDefault(p => p.Id == product.Id);
-        if (item != null)
+        var cartItem = await _db.CartItems.FirstOrDefaultAsync(ci => ci.ProductId == product.Id);
+        if (cartItem != null)
         {
-            _cartItems.Remove(item);
+            _db.CartItems.Remove(cartItem);
+            await _db.SaveChangesAsync();
             Onchange?.Invoke();
         }
-        return Task.CompletedTask;
     }
 
-    public Task<List<Product>> GetCart() => Task.FromResult(_cartItems.ToList());
+    public async Task<List<Product>> GetCart()
+    {
+        // Eager load Product for each CartItem
+        return await _db.CartItems
+            .Include(ci => ci.Product)
+            .Select(ci => ci.Product)
+            .ToListAsync();
+    }
+
+    public Task<List<Product>> CartItems => GetCart();
 }
+
