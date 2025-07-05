@@ -6,7 +6,7 @@ namespace BlazorNgani.Admin.Components.Services
     {
         Task<List<Product>> GetAllProduct();
         Task<Product> GetProduct(int productId);
-     
+        Task DeleteBook(Product product);
 
     }
 }

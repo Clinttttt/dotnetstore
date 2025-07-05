@@ -4,8 +4,9 @@
 @inject IProductService ProductService
 @inject ICartService CartService
 @rendermode InteractiveServer
-@using Models
 @attribute [StreamRendering]
+@using Models
+
 
 
 
@@ -15,7 +16,7 @@
     </div>
     @if (product != null)
     {
-        <div class="grid  bg-base-200 border-t border-base-300 h-119">
+        <div class="grid  bg-base-200 border-t border-base-300 h-121 "  >
             <div class=" flex" style="margin-top:-3.4rem; ">
                 <div class="hero  min-h-screen ">
                     <div class="hero-content flex-col lg:flex-row">
@@ -35,12 +36,17 @@
                             <h1 class="text-3xl text-primary font-semibold mt-1">$@product.Price.ToString("0.00")</h1>
                             <div class="flex flex-row mt-4 gap-4">
                                 <button class="btn btn-warning" type="button" @onclick="AddToCarts">Add To Cart</button>
-                                <button class="btn btn-secondary">Purchase</button>
+                                <button class="btn btn-secondary" onclick="my_modal_4.showModal()">Purchase</button>
+                                  
+                             
+
+                             
+                               
                             </div>
-                            @if (showAdded)
+                            @*     @if (showAdded)
                             {
                                 <div class="alert alert-success mt-2">Added to cart!</div>
-                            }
+                            }*@
                             <p class="py-4">@product.Description</p>
                             <h1 class="text-base-content mt-1 text-md">Genre:&nbsp;@product.Genre</h1>
                             <h1 class="text-base-content mt-1 text-md">Language:&nbsp;@product.Language</h1>
