@@ -11,6 +11,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddServerSideBlazor();
 builder.Services.AddScoped<ICartService, CartService>();
 builder.Services.AddScoped<IProductService, ProductService>();
+
 builder.Services.AddAuthentication(options =>
 {
     options.DefaultScheme = "Cookies";
@@ -21,7 +22,10 @@ builder.Services.AddAuthentication(options =>
     {
         options.ClientId = "631672100001-bc07thrnb5p03gfbt5bp36ol3st897il.apps.googleusercontent.com";
         options.ClientSecret = "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";
+        options.SignInScheme = "Cookies";
     });
+builder.Services.AddHttpContextAccessor();
+builder.Services.AddAuthorization(); 
 
 builder.Services.AddRazorComponents()
     .AddInteractiveServerComponents();
@@ -45,6 +49,8 @@ app.UseHttpsRedirection();
 
 
 app.UseAntiforgery();
+app.UseAuthentication();
+app.UseAuthorization();
 
 app.MapStaticAssets();
 app.MapRazorComponents<App>()

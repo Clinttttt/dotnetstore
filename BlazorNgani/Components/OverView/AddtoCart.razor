@@ -1,11 +1,11 @@
 ﻿@using BlazorNgani.Admin.Components.Services
 @page "/AddToCart"
 @using Models
-@rendermode InteractiveServer
 @inject IProductService ProductService
 @inject ICartService CartService
 @inject NavigationManager navigation
 @implements IDisposable
+@rendermode InteractiveServer
 @attribute [StreamRendering]
 <div class="flex-col flex flex-wrap sm:flex-wrap lg:flex flex-row gap-9 mt-5 justify-center  items-center flex-wrap min-h-screen">
 

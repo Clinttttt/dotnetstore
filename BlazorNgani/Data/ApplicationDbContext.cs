@@ -10,6 +10,7 @@ namespace BlazorNgani.Data
         }
         public DbSet<Product> ProductInfos { get; set; }
         public DbSet<CartItem> CartItems { get; set; }
+        public DbSet<AdminInfoModel> AdminInformation { get; set; }
 
         protected ApplicationDbContext()
         {

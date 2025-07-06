@@ -1,5 +1,6 @@
 ﻿@inject NavigationManager Navigation
 @page "/AdminHome"
+@attribute [Authorize(Policy = "AdminOnly")]
 @using BlazorNgani.Admin.Components.Services
 @inject IProductService ProductService
 @using Microsoft.AspNetCore.Components.Routing
@@ -10,7 +11,9 @@
 @attribute [StreamRendering]
 @inject ApplicationDbContext _db
 @rendermode InteractiveServer
-
+@attribute [Authorize]
+@using Microsoft.AspNetCore.Authorization
+@using Microsoft.AspNetCore.Components.Authorization
 
     <div class="page">
 
@@ -166,6 +169,9 @@
 
 
 @code {
+    @* [Inject]
+    private AuthenticationStateProvider AuthenticationStateProvider { get; set; }*@
+
     private List<Product> products = new();
 
 
@@ -173,7 +179,12 @@
     {
         products = await ProductService.GetAllProduct();
 
-
+        @* var authState = await AuthenticationStateProvider.GetAuthenticationStateAsync();
+        var user = authState.User;
+        if (!user.Identity.IsAuthenticated)
+        {
+            // Handle unauthorized access
+        }*@
     }
     private async Task RemoveProduct(Product productToRemove)
     {
@@ -182,6 +193,8 @@
         StateHasChanged();
 
     }
+
+ 
 
 
     
